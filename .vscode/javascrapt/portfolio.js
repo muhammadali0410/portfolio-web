@@ -7,8 +7,7 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Smooth scrolling
+ 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -18,7 +17,7 @@
             });
         });
 
-        // Scroll animations
+         
         function checkScroll() {
             const elements = document.querySelectorAll('.fade-in');
             elements.forEach(element => {
@@ -31,12 +30,12 @@
             });
         }
 
-        // Run on load and scroll
+     
         window.addEventListener('load', checkScroll);
         window.addEventListener('scroll', checkScroll);
 
 
-        // whatappopen
+       
           
         document.querySelectorAll('[href^="https://wa.me"]').forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -45,3 +44,5 @@
                
             });
         });
+
+        
