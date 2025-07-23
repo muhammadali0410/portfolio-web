@@ -1,10 +1,10 @@
-:root {
-            --primary: #0d6efd;       /* Dark Blue */
-            --secondary: #0dcaf0;     /* Sky Blue */
-            --accent: #6610f2;        /* Purple */
-            --dark: #0b0f19;         /* Deep Navy */
-            --darker: #05080f;       /* Almost Black */
-            --light: #e9f1ff;        /* Light Blue */
+ :root {
+            --primary: #0d6efd;        
+            --secondary: #0dcaf0;    
+            --accent: #6610f2;        
+            --dark: #0b0f19;         
+            --darker: #05080f;        
+            --light: #e9f1ff;         
             --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             --font-serif: 'Georgia', serif;
         }
@@ -17,7 +17,7 @@
             line-height: 1.6;
         }
         
-        /* Custom Scrollbar */
+       
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -29,7 +29,7 @@
             border-radius: 5px;
         }
         
-        /* Navbar - Glass Morphism */
+        /* Navbar   */
         .navbar {
             background: rgba(11, 15, 25, 0.8) !important;
             backdrop-filter: blur(10px);
@@ -207,7 +207,7 @@
             to { width: 50%; }
         }
         
-        /* Cards - Glass Morphism */
+       
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -273,7 +273,7 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 10px rgba(13, 110, 253, 0.3);
         }
-            /* Add this CSS to fix image display */
+            
     .project-img-container {
         position: relative;
         height: 220px;
@@ -320,7 +320,7 @@
     }
 
         
-        /* Contact Section - Particles Background */
+        /* Contact Section   */
         #contact {
             background: var(--dark);
             position: relative;
@@ -378,25 +378,65 @@
         }
         
         /* Footer */
-        footer {
-            background: var(--dark);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 20px 0;
-            font-size: 0.9rem;
-            position: relative;
-        }
+       
+ footer {
+    background: var(--darker);
+    color: white;
+    font-family: var(--font-serif);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient);
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary) !important;
+    padding-left: 5px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    color: white !important;
+    text-decoration: none;
+}
+
+ 
+@media (max-width: 768px) {
+    footer .text-md-start,
+    footer .text-md-end {
+        text-align: center !important;
+    }
+    
+    footer .row > div {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+}
         
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: var(--gradient);
-        }
-        
-        /* Animations */
+         
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -439,7 +479,7 @@
             --font-serif: 'Georgia', serif;
         }
          
-        /* WhatsApp specific styles */
+      
         .whatsapp-btn {
             background-color: var(--whatsapp);
             color: white;
